@@ -24,11 +24,15 @@ conda config --add create_default_packages merv::envvar-pythonnousersite-true
 
 which will include this package automatically in all future environments at environment creation.
 
-## Reuse
+## Reuse and Repurposing
 This package is a proof-of-concept to demonstrate managing environment variables
 in Conda environments through the "unit of computation" of Conda, which is the 
 Conda package. It is released under a CC0 license (i.e., public domain). Feel free 
 to use this repository as an outline for similar packages.
+
+The environment variables are set/unset in the `recipe/[de]activate.{bat,sh}` files. 
+While there is not a standing convention for packages managing environment variables,
+this uses the template `envvar-<variable_name>-<value>`.
 
 The repository includes a GitHub Workflow that builds and uploads the package to 
 Anaconda Cloud. For the uploading portion to work, users should adjust the 
